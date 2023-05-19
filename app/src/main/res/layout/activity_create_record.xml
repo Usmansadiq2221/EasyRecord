@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.CreateRecordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/background_file"
+            android:fontFamily="@font/keepcalm_medium"
+            android:gravity="center"
+            android:text="Create Record"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/_cRecordAdView"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/bannerAd_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/_cLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/_customerCnicNo"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/cnic_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter CNIC Number"
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/_cCnicNoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:paddingLeft="5dp"
+                android:text="Invalid CNIC number"
+                android:textColor="@color/myFav"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/_customerName"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/man_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter Customer Name"
+                android:inputType="textPersonName|text"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/_cCnicNameError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:paddingLeft="5dp"
+                android:text="Invalid customer name"
+                android:textColor="@color/myFav"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/_cnicSubmit"
+                android:layout_width="220dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:elevation="8dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="10dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:translationZ="4dp"
+                app:rippleColor="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/_cCnicPicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/_cCnicFront"
+                    android:layout_width="125dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/placeholder" />
+
+                <ImageView
+                    android:id="@+id/_cCnicBack"
+                    android:layout_width="125dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/placeholder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/_cTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:text="CNIC Front"
+                    android:textAlignment="center"
+                    android:textColor="@color/myFav" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:text="CNIC Back"
+                    android:textAlignment="center"
+                    android:textColor="@color/myFav" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/_tInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/_tId"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/description_icon"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Transaction Id"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/_cTIdError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="5dp"
+                    android:text="Invalid transaction number"
+                    android:textColor="@color/myFav"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/_tPhoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Phone No"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/_cPhoneNoError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="5dp"
+                    android:text="Invalid phone number"
+                    android:textColor="@color/myFav"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/_tType"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@drawable/edittext_background"
+                    android:paddingLeft="5dp"
+                    android:scrollbars="horizontal"
+                    android:spinnerMode="dialog" />
+
+                <TextView
+                    android:id="@+id/_cTTypeError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="5dp"
+                    android:text="Select transaction type"
+                    android:textColor="@color/myFav"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/_company"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@drawable/edittext_background"
+                    android:paddingLeft="5dp"
+                    android:scrollbars="horizontal"
+                    android:spinnerMode="dialog" />
+
+                <TextView
+                    android:id="@+id/_cCompanyError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="5dp"
+                    android:text="Select Company"
+                    android:textColor="@color/myFav"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/_tAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="17dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/_cAmountError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="5dp"
+                    android:text="Invalid transaction amount"
+                    android:textColor="@color/myFav"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/_recordSubmit"
+                    android:layout_width="220dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/keepcalm_medium"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="10dp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:translationZ="4dp"
+                    app:rippleColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/_cProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/_uploadingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:text="Successfully\nAdded"
+                android:textAlignment="center"
+                android:textColor="@color/myFav"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/_cNetError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/keepcalm_medium"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Network Problem\nCheck your internet connection"
+            android:textAlignment="center"
+            android:textColor="@color/myFav"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

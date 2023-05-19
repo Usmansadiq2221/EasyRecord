@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myFavGray"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activities.UserProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/_profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="48dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/_profileimage"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/imagebackfile"
+            android:padding="7dp"
+            android:src="@drawable/enter_profile_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:srcCompat="@drawable/enter_profile_icon"
+            app:strokeColor="@color/myFavTealLight"
+            app:strokeWidth="5dp"
+            tools:ignore="VectorDrawableCompat"
+            tools:srcCompat="@drawable/enter_profile_icon" />
+
+        <TextView
+            android:id="@+id/_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/keepcalm_medium"
+            android:gravity="center"
+            android:text="username"
+            android:textColor="@color/myFavTeal"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/_userIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Id Card"
+            android:textColor="@color/myFavTeal"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/_editProfile"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/keepcalm_medium"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/myFavTeal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/keepcalm_medium"
+            android:text="Privacy Policy"
+            android:textColor="@color/myFav"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/_viewPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:text=" View Policy"
+            android:textColor="@color/myFavTeal"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/myFavTeal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/keepcalm_medium"
+            android:text="Terms &amp; Conditions"
+            android:textColor="@color/myFav"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/_viewTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:text=" View Terms &amp; Conditions"
+            android:textColor="@color/myFavTeal"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/myFavTeal" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/_profileprogress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

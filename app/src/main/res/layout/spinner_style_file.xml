@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+    android:fontFamily="@font/keepcalm_medium"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="4dp"
+    android:text="Select..."
+    android:textColor="@color/white"
+    android:textSize="20sp">
+
+</CheckedTextView>

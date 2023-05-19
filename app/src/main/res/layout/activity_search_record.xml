@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:scrollbars="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.SearchRecordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/background_file"
+            android:fontFamily="@font/keepcalm_medium"
+            android:gravity="center"
+            android:text="Search Record"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/_searchType"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:paddingLeft="5dp"
+                android:scrollbars="horizontal"
+                android:spinnerMode="dialog" />
+
+            <EditText
+                android:id="@+id/_sCnicNo"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/cnic_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter CNIC Number"
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/_sTId"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/description_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter Transaction Id"
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/_sTPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/phone_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter Phone No"
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/_tDate"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/date_icon"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:gravity="center_vertical"
+                android:hint="Enter Date(dd-mm-yyyy)"
+                android:inputType="date"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:scrollbars="horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/_searchErrorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:text="Invalid"
+                android:textColor="@color/myFav"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/_searchSubmit"
+                android:layout_width="220dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:elevation="8dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="10dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:translationZ="4dp"
+                android:visibility="gone"
+                app:rippleColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/_sNetworkErrorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/keepcalm_medium"
+                android:paddingLeft="5dp"
+                android:text="Network problem\nCheck your internet connection"
+                android:textAlignment="center"
+                android:textColor="@color/myFav"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/_preRecordList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="15"
+            app:shimmer_demo_grid_child_count="2"
+            app:shimmer_demo_layout="@layout/record_loading_layout"
+            app:shimmer_demo_layout_manager_type="linear_vertical" >
+
+        </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/_sRecordAdView"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/bannerAd_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+</ScrollView>
